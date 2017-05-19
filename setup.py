@@ -26,7 +26,7 @@
 
 from setuptools import find_packages, setup
 
-setup(name='mastercard_api_core',
+setup(name='mastercard_api_core_py3',
       version='1.4.2',
       description='MasterCard API Python Core SDK modified to work with Python 3',
       long_description='MasterCard API Python Core SDK modified to work with Python 3',
