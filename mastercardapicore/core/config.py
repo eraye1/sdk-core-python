@@ -75,7 +75,7 @@ class Config(object):
     def setEnvironment(cls,environment):
         if environment:
             cls.environment = environment
-            for registeredInstance in cls.registeredInstances.values():
+            for registeredInstance in list(cls.registeredInstances.values()):
                 registeredInstance.setEnvironment(environment)
             
     @classmethod
@@ -85,7 +85,7 @@ class Config(object):
     @classmethod
     def registerResourceConfig(cls,resourceConfig):
         className = resourceConfig.getName()
-        if not className in cls.registeredInstances.keys():
+        if not className in list(cls.registeredInstances.keys()):
             cls.registeredInstances[className] = resourceConfig
 
     @classmethod

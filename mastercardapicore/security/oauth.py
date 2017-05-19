@@ -25,10 +25,10 @@
 # SUCH DAMAGE.
 #
 from mastercardapicore.core.config import Config
-from authentication import Authentication
+from .authentication import Authentication
 from OpenSSL import crypto
 
-import util as SecurityUtil
+from . import util as SecurityUtil
 import mastercardapicore.core.util as util
 import collections
 
@@ -92,7 +92,7 @@ class OAuthAuthentication(Authentication):
         oAuthBaseParametersDict = oAuthBaseParameters.getBaseParametersDict()
 
         #Generate the header value for OAuth Header
-        oauth_key = OAuthParameters.OAUTH_KEY+" "+",".join([ util.uriRfc3986Encode(str(key))+"=\""+util.uriRfc3986Encode(str(value))+"\"" for key,value in oAuthBaseParametersDict.items() ])
+        oauth_key = OAuthParameters.OAUTH_KEY+" "+",".join([ util.uriRfc3986Encode(str(key))+"=\""+util.uriRfc3986Encode(str(value))+"\"" for key,value in list(oAuthBaseParametersDict.items()) ])
         return oauth_key
 
 

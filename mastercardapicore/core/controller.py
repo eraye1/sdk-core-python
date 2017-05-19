@@ -164,7 +164,7 @@ class APIController(object):
         request.params.update(queryMap)
         
         #Add headers
-        for key, value in headerMap.items():
+        for key, value in list(headerMap.items()):
             request.headers[key] = value
 
         #Sign the request
@@ -199,17 +199,17 @@ class APIController(object):
 
         ##Log the request parameters if Debug is on
         if Config.isDebug():
-            print "------ Request ----"
-            print ""
-            print "URL"
-            print prepreq.url
-            print ""
-            print "Headers"
-            print prepreq.headers
-            print ""
-            print "Body"
-            print prepreq.body
-            print " "
+            print("------ Request ----")
+            print("")
+            print("URL")
+            print(prepreq.url)
+            print("")
+            print("Headers")
+            print(prepreq.headers)
+            print("")
+            print("Body")
+            print(prepreq.body)
+            print(" ")
 
 
         #Make the request
@@ -219,17 +219,17 @@ class APIController(object):
 
         ##Log the response parameters if Debug is on
         if Config.isDebug():
-            print "------ Response ----"
-            print ""
-            print "Status Code"
-            print response.status_code
-            print ""
-            print "Headers"
-            print response.headers
-            print ""
-            print "Body"
-            print response.content
-            print " "
+            print("------ Response ----")
+            print("")
+            print("Status Code")
+            print(response.status_code)
+            print("")
+            print("Headers")
+            print(response.headers)
+            print("")
+            print("Body")
+            print(response.content)
+            print(" ")
 
         content = response.content
 

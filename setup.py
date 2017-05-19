@@ -24,25 +24,26 @@
 # SUCH DAMAGE.
 #
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 setup(name='mastercard_api_core',
       version='1.4.2',
-      description='MasterCard API Python Core SDK',
-      long_description='MasterCard API Python Core SDK',
+      description='MasterCard API Python Core SDK modified to work with Python 3',
+      long_description='MasterCard API Python Core SDK modified to work with Python 3',
       author='MasterCard Worldwide',
       author_email='APISupport@mastercard.com',
-      url='https://www.developer.mastercard.com',
+      url='https://github.com/candeias/sdk-core-python',
       license='BSD2',
       packages=find_packages(),
       classifiers=[
-        'Intended Audience :: Developers',
-        'Natural Language :: English',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
-        'Topic :: Software Development :: Libraries :: Python Modules'
-        ],
-        tests_require=['mock','nose','coverage','urllib3[secure]'],
-        install_requires=['requests', 'pyOpenSSL', 'urllib3[secure]', 'cryptography==1.4']
-)
+          'Intended Audience :: Developers',
+          'Natural Language :: English',
+          'Operating System :: OS Independent',
+          'Programming Language :: Python',
+          'Programming Language :: Python :: 3.6',
+          'Topic :: Software Development :: Libraries :: Python Modules'
+      ],
+      tests_require=['mock', 'nose', 'coverage', 'urllib3[secure]'],
+      install_requires=['requests', 'pyOpenSSL',
+                        'urllib3[secure]', 'cryptography==1.4']
+      )
