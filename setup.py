@@ -45,5 +45,5 @@ setup(name='mastercard_api_core_py3',
       ],
       tests_require=['mock', 'nose', 'coverage', 'urllib3[secure]'],
       install_requires=['requests', 'pyOpenSSL',
-                        'urllib3[secure]', 'cryptography==1.4']
+                        'urllib3[secure]', 'cryptography==2.1.4']
       )
