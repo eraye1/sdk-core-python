@@ -27,7 +27,7 @@
 from setuptools import find_packages, setup
 
 setup(name='mastercard_api_core_py3',
-      version='1.4.2',
+      version='1.5.0',
       description='MasterCard API Python Core SDK modified to work with Python 3',
       long_description='MasterCard API Python Core SDK modified to work with Python 3',
       author='MasterCard Worldwide',
@@ -45,5 +45,5 @@ setup(name='mastercard_api_core_py3',
       ],
       tests_require=['mock', 'nose', 'coverage', 'urllib3[secure]'],
       install_requires=['requests', 'pyOpenSSL',
-                        'urllib3[secure]', 'cryptography==1.4']
+                        'urllib3[secure]', 'cryptography==2.1.4']
       )
